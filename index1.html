@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ICT Club Checker</title>
+    <!-- PyScript Core -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #2a9833;
+            color: #207224;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            border: 1px solid #c8e6c9;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 10px; /* Only the main box is rounded */
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            font-size: 16px;
+            border-radius: 0; /* Sharp corners for inputs and buttons */
+        }
+
+        input {
+            border: 1px solid #a5d6a7;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #4caf50;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 12px;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+
+        #result-area {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px;
+            background-color: #f1f8e9;
+            min-height: 24px;
+            border-radius: 0; /* Sharp corners for result area */
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html"><li>Home</li></a>
+
+    <div class="box">
+        <h2>ICT Club Checker</h2>
+        
+        <input type="text" id="fname" placeholder="First Name">
+        <input type="text" id="lname" placeholder="Last Name">
+        
+        <button py-click="verify_candidate">ENTER</button>
+
+        <div id="result-area">Result</div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+
+</body>
+</html>
